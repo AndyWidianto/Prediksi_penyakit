@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 
 
-@app.route('/predict-kesehatan', methods=['POST'])
+@app.route('/', methods=['POST'])
 def predict2():
     
     model = jb.load("model2.h5")
