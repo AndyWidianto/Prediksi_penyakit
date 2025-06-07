@@ -5,8 +5,10 @@ import os
 app = Flask(__name__)
 
 
-
-@app.route('/', methods=['POST'])
+@app.route('/')
+def home():
+    return "Aplikasi berhasil berjalan"
+@app.route('/predict', methods=['POST'])
 def predict2():
     
     model = jb.load("model2.h5")
